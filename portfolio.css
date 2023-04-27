@@ -1,0 +1,445 @@
+:root {
+
+    --clr-primary-000: #b4f3f8;
+    --clr-primary-100: #1addef;
+    --clr-second-000: #2e2e2e;
+    --clr-second-100: black;
+    --clr-second-200: #fefffd;
+
+    --ff-primary: 'Assistant', sans-serif;
+
+    --fs-small: .875rem;
+    --fs-medium: 2rem;
+    --fs-big: 3rem;
+    --fs-small-media: 1.2rem;
+    --fs-medium-media: 2.5rem;
+    --fs-big-media: 3.4rem;
+
+    --fw-regular: 200;
+    --fw-semiBold: 500;
+    --fw-bold: 800;
+}
+
+/* Global Properties */
+
+* {
+    font-family: var(--ff-primary);
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-second-000);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: var(--fs-big);
+    font-weight: var(--fw-bold);
+}
+
+h2 {
+    font-weight: var(--fw-bold);
+}
+
+h3 {
+    font-size: var(--fs-small-media);
+    font-weight: var(--fw-bold);
+}
+
+.mainButton {
+    background-color: var(--clr-primary-100);
+    border: 1px solid #2e2e2e;
+    border-radius: 20px;
+    color: var(--clr-second-000);
+    font-size: 0.7rem;
+    padding: .3125rem .9375rem;
+    margin: .8rem 0;
+}
+
+.formBtn {
+    background-color: var(--clr-primary-100);
+    border: none;
+    color: var(--clr-second-000);
+    font-size: 0.7rem;
+    width: 80px;
+    min-height: 30px;
+    min-width: 90px;
+    margin: .8rem 0;
+    font-weight: var(--fw-bold);
+}
+
+/* Header Section */
+
+.container-fluid {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 750px;
+
+}
+
+.navbar-nav {
+    padding: 0;
+}
+
+.container-fluid img {
+    border-radius: 50%;
+    width: 35px;
+    margin: 10px;
+    padding: 0;
+
+}
+
+
+.navbar {
+    background-color: var(--clr-second-200);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    padding: .75rem;
+    margin: 0;
+    font-size: var(--fs-small);
+}
+
+.heroWrap,
+.sectionFour {
+    position: relative;
+    background-color: var(--clr-primary-000);
+
+}
+
+.heroWrap::before,
+.sectionFour::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url(portfolioimages/bg.jpeg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.heroContent {
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.heroSectionLogosNav {
+    background-color: var(--clr-second-200);
+    border-top: 2px solid rgba(227, 227, 227, 0.441);
+    border-bottom: 2px solid rgb(227, 227, 227, 0.441);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icons {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* AboutMe Section */
+
+.sectionOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.aboutMe {
+    display: flex;
+    max-width: 700px;
+    gap: .625rem;
+    margin: 2.1875rem 0;
+}
+
+.aboutMe img {
+    max-width: 11.25rem;
+    max-height: 12.5rem;
+}
+
+.aboutMeContent {
+    font-size: var(--fs-small);
+}
+
+/* Resume Section */
+
+.sectionTwo {
+    background-color: var(--clr-second-000);
+    min-height: 200px;
+    color: var(--clr-second-200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.resume {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume img {
+    rotate: -17deg;
+}
+
+/* Works section */
+
+
+.sectionThree {
+    background-color: rgba(231, 231, 231, 0.349);
+    text-align: center;
+    padding-top: 1.25rem;
+}
+
+.worksBoxs {
+
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    padding: 2rem 0;
+
+}
+
+
+.box1 {
+    background-color: white;
+    width: 200px;
+    min-height: 330px;
+    border-radius: .4375rem;
+
+}
+
+
+.box1 img {
+    border-radius: 7px 7px 0 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1rem;
+
+}
+
+.content {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.worksGrid {
+    width: 180px;
+    height: 100%;
+    text-align: center;
+
+
+}
+
+.worksGrid>p:first-of-type {
+    font-size: var(--fs-small);
+}
+
+/* Form Section */
+
+.formWrap {
+    min-height: 500px;
+    width: 700px;
+    padding: 3rem;
+    position: relative;
+}
+
+.sectionFour {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-size: .6875rem;
+}
+
+form input,
+textarea {
+    border: none;
+    min-height: 1.7rem;
+    border-bottom: 1px solid var(--clr-second-000);
+}
+
+form label {
+    font-size: .8125rem;
+    padding-top: .25rem;
+}
+
+/* Footer Section */
+
+footer {
+    background-color: var(--clr-second-000);
+
+}
+
+.footerBox {
+    display: flex;
+    justify-content: center;
+}
+
+.socialNav {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 2rem 0;
+
+}
+
+.socialNetworks {
+    min-width: 80px;
+}
+
+.socialNetworks img {
+    max-width: 18px;
+}
+
+.socialNetworks a {
+    color: var(--clr-second-200);
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .3125rem;
+
+}
+
+
+
+/* Media Query */
+
+@media (min-width:320px) and (max-width:575px) {
+
+    .navBar img {
+        margin: 10px;
+    }
+
+    ul {
+        gap: 1rem;
+    }
+
+    .heroContent p {
+        padding: 0 .625rem;
+    }
+
+    .icons {
+        display: grid;
+        grid-template-columns: repeat(5, 50px);
+        justify-content: space-evenly;
+    }
+
+    .aboutMe {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 .625rem;
+
+    }
+
+    .resume {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .resume img {
+        display: none;
+    }
+
+    .worksBoxs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box1 {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .worksGrid {
+        width: 90%;
+    }
+
+
+    .formWrap {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        text-align: center;
+    }
+
+    .formBtn {
+        margin: 0.5rem auto;
+    }
+
+    .socialNav {
+        display: grid;
+        grid-template-columns: repeat(2, 80px);
+    }
+}

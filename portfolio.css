@@ -16,7 +16,8 @@
     --fs-big-media: 3.4rem;
 
     --fw-regular: 200;
-    --fw-semiBold: 500;
+    --fw-medium: 500;
+    --fw-semibold: 700;
     --fw-bold: 800;
 }
 
@@ -56,7 +57,7 @@ h2 {
 
 h3 {
     font-size: var(--fs-small-media);
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-semibold);
 }
 
 .mainButton {
@@ -285,9 +286,10 @@ ul {
 
 .box1 img {
     border-radius: 7px 7px 0 0;
+    border-bottom: 1px solid rgb(240, 240, 240);
     width: 100%;
     height: 100%;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
     transition: all 0.5s;
 
 }
@@ -311,6 +313,7 @@ ul {
 
 .worksGrid>p:first-of-type {
     font-size: var(--fs-small);
+    margin-bottom: 1rem;
 }
 
 /* Form Section */
@@ -376,7 +379,7 @@ footer {
 }
 
 .socialNetworks img {
-    max-width: 18px;
+    width: 22px;
 }
 
 
@@ -462,6 +465,7 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         width: 100%;
     }
 
@@ -476,6 +480,7 @@ footer {
 
     .socialNav {
         display: grid;
-        grid-template-columns: repeat(2, 80px);
+        grid-template-columns: repeat(3, 1fr);
     }
+
 }

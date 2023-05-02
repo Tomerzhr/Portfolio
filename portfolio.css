@@ -62,11 +62,11 @@ h3 {
 
 .mainButton {
     background-color: var(--clr-primary-000);
-    border: 1px solid #2e2e2e;
+    border: none;
     border-radius: 20px;
     color: var(--clr-second-000);
     font-size: 0.7rem;
-    padding: .3125rem .9375rem;
+    padding: .125rem .9375rem;
     margin: 0.3rem 0.2rem;
     transition: all 0.4s;
 }
@@ -89,13 +89,22 @@ h3 {
 
 
 
-/* Header Section */
+/* navbar Section */
 
 .container-fluid {
     display: flex;
     flex-direction: row-reverse;
     max-width: 750px;
 
+}
+
+.container-fluid a {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.container-fluid p {
+    margin-top: 1rem;
 }
 
 .navbar-nav {
@@ -132,6 +141,9 @@ ul {
     margin: 0;
     font-size: var(--fs-small);
 }
+
+/* Header Section */
+
 
 .heroWrap,
 .sectionFour {
@@ -260,7 +272,7 @@ ul {
 .worksBoxs {
 
     display: grid;
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, 230px);
     gap: 1rem;
     justify-content: center;
     align-content: center;
@@ -271,7 +283,7 @@ ul {
 
 .box1 {
     background-color: white;
-    width: 200px;
+    width: 230px;
     min-height: 330px;
     border-radius: .4375rem;
     transition: all 0.5s;
@@ -296,7 +308,7 @@ ul {
 
 
 .content {
-    width: 200px;
+    width: 230px;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -75,17 +75,7 @@ h3 {
     background-color: var(--clr-primary-100);
 }
 
-.formBtn {
-    background-color: var(--clr-primary-100);
-    border: none;
-    color: var(--clr-second-000);
-    font-size: 0.7rem;
-    width: 80px;
-    min-height: 30px;
-    min-width: 90px;
-    margin: .8rem 0;
-    font-weight: var(--fw-bold);
-}
+
 
 
 
@@ -273,7 +263,7 @@ ul {
 
     display: grid;
     grid-template-columns: repeat(3, 230px);
-    gap: 1rem;
+    gap: 28px;
     justify-content: center;
     align-content: center;
     padding: 2rem 0;
@@ -291,8 +281,8 @@ ul {
 }
 
 .box1:hover {
-    cursor: pointer;
     box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.19);
+    transform: scale(1.07);
 }
 
 
@@ -303,7 +293,6 @@ ul {
     height: 100%;
     margin-bottom: 1rem;
     transition: all 0.5s;
-
 }
 
 
@@ -343,27 +332,39 @@ ul {
 }
 
 form {
-    max-width: 300px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     padding-top: 1rem;
-}
-
-input::placeholder,
-textarea::placeholder {
-    font-size: .6875rem;
 }
 
 form input,
 textarea {
     border: none;
     min-height: 1.7rem;
-    border-bottom: 1px solid var(--clr-second-000);
+    border-bottom: 1.5px solid var(--clr-second-000);
+}
+
+form input:focus,
+textarea:focus {
+    outline: none !important;
 }
 
 form label {
     font-size: .8125rem;
     padding-top: .25rem;
+}
+
+.formBtn {
+    background-color: var(--clr-primary-100);
+    border: none;
+    color: var(--clr-second-000);
+    font-size: 0.8rem;
+    width: 80px;
+    min-height: 30px;
+    min-width: 90px;
+    margin: .8rem 0;
+    font-weight: var(--fw-bold);
 }
 
 /* Footer Section */
@@ -414,6 +415,10 @@ footer {
 
     .navBar img {
         margin: 10px;
+    }
+
+    .navbar {
+        --bs-navbar-toggler-focus-width: 0rem;
     }
 
     ul {
@@ -487,7 +492,8 @@ footer {
     }
 
     .formBtn {
-        margin: 0.5rem auto;
+        margin: 16px 0;
+        width: 300px;
     }
 
     .socialNav {

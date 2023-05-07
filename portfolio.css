@@ -49,6 +49,7 @@ p {
 h1 {
     font-size: var(--fs-big);
     font-weight: var(--fw-bold);
+    margin-top: 2rem
 }
 
 h2 {

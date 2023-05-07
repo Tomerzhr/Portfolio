@@ -272,6 +272,7 @@ ul {
 
 
 .box1 {
+    overflow: hidden;
     background-color: white;
     width: 230px;
     min-height: 330px;
@@ -282,7 +283,6 @@ ul {
 
 .box1:hover {
     box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.19);
-    transform: scale(1.07);
 }
 
 
@@ -295,6 +295,9 @@ ul {
     transition: all 0.5s;
 }
 
+.box1:hover img {
+    transform: scale(1.1);
+}
 
 .content {
     width: 230px;

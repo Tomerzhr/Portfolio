@@ -145,7 +145,6 @@ ul {
 .heroWrap::before,
 .sectionFour::before {
     content: "";
-    display: block;
     position: absolute;
     left: 0;
     top: 0;
@@ -321,16 +320,16 @@ ul {
 
 /* Form Section */
 
+.sectionFour {
+    display: flex;
+    justify-content: center;
+}
+
 .formWrap {
     min-height: 500px;
     width: 700px;
     padding: 3rem;
     position: relative;
-}
-
-.sectionFour {
-    display: flex;
-    justify-content: center;
 }
 
 

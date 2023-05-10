@@ -411,6 +411,12 @@ span {
 
 }
 
+.rights {
+    color: var(--clr-second-200);
+    text-align: center;
+    padding-bottom: 16px;
+}
+
 
 
 /* Media Query */

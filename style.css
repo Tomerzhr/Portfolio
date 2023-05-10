@@ -414,6 +414,7 @@ span {
 .rights {
     color: var(--clr-second-200);
     font-weight: var(--fw-regular);
+    font-size: var(--fs-small);
     text-align: center;
     padding-bottom: 16px;
 }

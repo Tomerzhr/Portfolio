@@ -371,7 +371,9 @@ form label {
   font-size: 0.8125rem;
   padding-top: 0.25rem;
 }
-
+.formBtn:disabled {
+  opacity: 0.5;
+}
 .formBtn {
   background-color: var(--clr-primary-100);
   border: none;

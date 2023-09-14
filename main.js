@@ -3,64 +3,93 @@ const emailInput = document.forms["form-field"]["email"];
 const nameInput = document.forms["form-field"]["fullName"];
 const phoneInput = document.forms["form-field"]["tel"];
 const massageInput = document.forms["form-field"]["massage"];
+const formBtn = document.querySelector(".formBtn");
 
-function nameValidation(name) {
-  let nameRegex = /^[a-zA-Z\u0590-\u05FF\u200f\u200e ]+$/;
-  return name.match(nameRegex);
-}
-function emailValidation(email) {
-  let emailRegex = /^[\w\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-  return email.match(emailRegex);
-}
-function phoneValidation(phone) {
-  let phoneRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
-  return phone.match(phoneRegex);
-}
-function massageValidation(massage) {
-  let massageRegex = /^[a-zA-Z\u0590-\u05FF\u200f\u200e ]{10,60}$/;
-  return massage.match(massageRegex);
-}
+formBtn.disabled = true;
 
-function formValidation(e) {
-  const name = document.forms["form-field"]["fullName"].value;
-  const email = document.forms["form-field"]["email"].value;
-  const phone = document.forms["form-field"]["tel"].value;
-  const massage = document.forms["form-field"]["massage"].value;
+emailInput.addEventListener("input", mainValidation);
+nameInput.addEventListener("input", mainValidation);
+phoneInput.addEventListener("input", mainValidation);
+massageInput.addEventListener("input", mainValidation);
+
+formBtn.addEventListener("click", (e) => {
   e.preventDefault();
-
-  if (!nameValidation(name)) {
-    nameInput.style.borderColor = "red";
-    return;
-  } else {
-    nameInput.style.borderColor = "#2e2e2e";
-  }
-  if (!emailValidation(email)) {
-    emailInput.style.borderColor = "red";
-    return;
-  } else {
-    emailInput.style.borderColor = "#2e2e2e";
-  }
-  if (!phoneValidation(phone)) {
-    phoneInput.style.borderColor = "red";
-    return;
-  } else {
-    phoneInput.style.borderColor = "#2e2e2e";
-  }
-  if ((massage.length = 0 || !massageValidation(massage))) {
-    massageInput.style.borderColor = "red";
-    return;
-  } else {
-    massageInput.style.borderColor = "#2e2e2e";
-  }
   document.querySelector(".confirmation-message").style.display = "block";
   nameInput.value = "";
   emailInput.value = "";
   massageInput.value = "";
   phoneInput.value = "";
+});
+
+function mainValidation() {
+  if (
+    nameValidation(nameInput) &&
+    emailValidation(emailInput) &&
+    phoneValidation(phoneInput) &&
+    massageValidation(massageInput)
+  ) {
+    formBtn.disabled = false;
+  }
 }
 
-formField.addEventListener("click", formValidation);
-
+function nameValidation(nameInput) {
+  let nameRegex = /^[a-zA-Z\s]{3,15}$/;
+  if (
+    nameRegex.test(nameInput.value) === false ||
+    nameInput.value.length < 5 ||
+    nameInput.value === "" ||
+    nameInput.value === null
+  ) {
+    nameInput.style.borderColor = "red";
+  } else {
+    nameInput.style.borderColor = "#2e2e2e";
+    return true;
+  }
+}
+function emailValidation(emailInput) {
+  let emailRegex = /^[\w\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  if (
+    emailRegex.test(emailInput.value) === false ||
+    emailInput.value.length < 5 ||
+    emailInput.value.length > 20 ||
+    emailInput.value === "" ||
+    emailInput.value === null
+  ) {
+    emailInput.style.borderColor = "red";
+  } else {
+    emailInput.style.borderColor = "#2e2e2e";
+    return true;
+  }
+}
+function phoneValidation(phoneInput) {
+  let phoneRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
+  if (
+    phoneRegex.test(phoneInput.value) === false ||
+    phoneInput.value.length < 5 ||
+    phoneInput.value.length > 20 ||
+    phoneInput.value === "" ||
+    phoneInput.value === null
+  ) {
+    phoneInput.style.borderColor = "red";
+  } else {
+    phoneInput.style.borderColor = "#2e2e2e";
+    return true;
+  }
+}
+function massageValidation(massageInput) {
+  let massageRegex = /^[a-zA-Z\s]*$/;
+  if (
+    massageRegex.test(massageInput.value) === false ||
+    massageInput.value.length < 15 ||
+    massageInput.value === "" ||
+    massageInput.value === null
+  ) {
+    massageInput.style.borderColor = "red";
+  } else {
+    massageInput.style.borderColor = "#2e2e2e";
+    return true;
+  }
+}
 //  scroll to top
 
 let myButton = document.getElementById("upBtn");

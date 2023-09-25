@@ -125,7 +125,7 @@ const javascriptProjects = [
   new javaScriptProject("2", "JavaPage-credit-card.html", "credit-card.png", "כרטיס אשראי"),
   new javaScriptProject("3", "JavaPage-screen-builder.html", "screen-builder.png", "בונה מסכים"),
   new javaScriptProject("4", "JavaPage-shopping-cart.html", "shopping-cart.png", "עגלת קניות"),
-  new javaScriptProject("5", "JavaPage-sign-in.html", "sign-in.png", "התחברות והרשמה"),
+  new javaScriptProject("5", "JavaPage-todoList.html", "todoList.png", "רשימת משימות"),
   new javaScriptProject("6", "JavaPage-user-management.html", "user-management.png", "ניהול משתמשים"),
 ];
 

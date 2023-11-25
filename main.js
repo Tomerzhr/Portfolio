@@ -128,6 +128,7 @@ const javascriptProjects = [
   new javaScriptProject("5", "JavaPage-todoList.html", "todoList.png", "רשימת משימות"),
   new javaScriptProject("6", "JavaPage-user-management.html", "user-management.png", "ניהול משתמשים"),
   new javaScriptProject("7", "JavaPage-weatherApp.html", "weatherApp.png", "אפליקציית מזג האוויר"),
+  new javaScriptProject("8", "JavaPage-login.html", "login.png", "ממשק התחברות"),
 ];
 
 function javascriptSection() {
